@@ -1,20 +1,34 @@
 import React from 'react';
 
-//Props로 text,checked,id 받아오기.
-const TodoItem = () => {
-
+const Header = () => {
     return (
-        <div className="toDoItem">
+        <header>
 
-            <h2>해야할 노동</h2>
+            <h1 id="title">노예의 노동일지</h1>
             <div className="buttonContainer">
-                <div className="buttonEtc">
-                    <button type="button" id="checkButton" className="tooltip"><span className="tooltiptext">노동 -완-</span></button>
-                    <button type="button" id="modifyButton" className="tooltip"><span className="tooltiptext">노동수정..</span></button>
-                    <button type="button" id="deleteButton" className="tooltip"><span className="tooltiptext">노동취소!!</span></button>
+                <div className="buttonBlue">
+                    <button type="button" id="listButton" className="tooltip"><span className="tooltiptext">자린고비뷰</span></button>
+                    <button type="button" id="gridButton" className="tooltip"><span className="tooltiptext">쌀가마뷰</span></button>
+                    <button type="button" id="addButton" className="tooltip"><span className="tooltiptext">노동추가</span></button>
+
+
                 </div>
+
             </div>
-        </div>
+
+            {/* 깔끔하게 list 위에 넣는게 나은거같음 
+             <div class="filter">
+                <select name="selectFilter">
+                    <option value="viewAll" selected="selected">필터선택</option>
+                    <option value="">완료</option>
+                    <option value="">미완료</option>
+                    <option value="">생성날짜(오름차순)</option>
+                </select>
+            </div>
+             */}
+
+        </header>
     )
 }
-export default TodoItem;
+
+export default Header;
