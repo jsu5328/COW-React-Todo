@@ -1,38 +1,154 @@
-.App {
+html{
+  background-color: #759FB6;
+}
+.html{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  margin-top:100px;
+}
+header {
+  background-color: #D9D9D9;
+  border-top-left-radius: 30px 30px;
+  border-top-right-radius: 30px 30px;
+  border-style:solid;
+  border-color:#D9D9D9;
+  border-width:5px;
+  height:90px;
+  width:600px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+#title{
+  margin-left:30px;
+  display:flex;
+  align-items:center;
+}
+.buttonContainer{
+  padding-right:30px;
+  display:flex;
+  align-items:center;
+}
+.buttonBlue>*{
+
+  margin:5px;
+  width:30px;
+  height:30px;
+  background-color: #759FB6;
+  border-style: none;
+  border-radius: 90%;
+}
+.buttonBlue>*:active {
+  background-color: #557688;
+}
+
+/* 버튼 툴팁 */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 80px;
+  background-color: rgb(91, 91, 91);
+  color: #fff;
   text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  margin-top:20px;
+  position: absolute;
+  z-index: 1;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* toDoItem CSS */
+.itemContainer{
+  width:600px;
+  border-style: solid;
+  border-top-style:none;
+  border-color:#D9D9D9 ;
+  border-width:5px;
+  background-color:#759FB6;
+  border-bottom-left-radius: 30px 30px;
+  border-bottom-right-radius: 30px 30px;
+  padding-top:0px;
+  padding-bottom:20px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+  display:flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ 
+}
+.toDoItem>.buttonContainer{
+  padding-right:5px;
+}
+.toDoItem{
+  width:500px;
+  height:50px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding:5px;
+
+  background-color: #D9D9D9;
+  border-radius: 25px;
+  z-index: 1;
+  box-shadow: 2px 2px 5px #5e5e5e;
+
+}
+.toDoItem>h2{
+  margin-left:20px;
+  font-size:15px;
+}
+/* toDo Button CSS */
+.buttonEtc>*{
+  margin:5px;
+  width:30px;
+  height:30px;
+  
+  border-style: none;
+  border-radius: 90%;
+  
+  
+}
+#checkButton{
+  background-color: #FFF493;
+}
+#checkButton:active {
+  background-color: #cfc77a;
+}
+#modifyButton{
+  background-color: #759FB6;
+}
+#modifyButton:active {
+  background-color: #557688;
+}
+#deleteButton{
+  background-color: #FF9494;
+}
+#deleteButton:active {
+  background-color: #cc7373;
 }
 
-.App-link {
-  color: #61dafb;
+.filter{
+  padding-bottom:5px;
+  width:600px;
+  border-left-style:solid;
+  border-right-style:solid;
+  border-width:5px;
+  border-color:#D9D9D9;
+  display:flex;
+  flex-direction: row;
+  justify-content: end;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filter>select{
+  width:100px;
+  border-style: none;
+  border-radius: 0px;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  background-color: #D9D9D9;
 }
