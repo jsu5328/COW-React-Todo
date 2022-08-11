@@ -1,12 +1,11 @@
-import React from 'react';
+import React,{useState} from 'react';
 
 //Props로 text,checked,id 받아오기.
-const TodoItem = () => {
-
+const TodoItem = () => {   
+    let [itemTitle,setItemTitle]=useState(['출근하기','루틴업무','영상편집']);
     return (
         <div className="toDoItem">
-
-            <h2>해야할 노동</h2>
+            <p className="text">{itemTitle[0]}</p>
             <div className="buttonContainer">
                 <div className="buttonEtc">
                     <button type="button" id="checkButton" className="tooltip"><span className="tooltiptext">노동 -완-</span></button>
